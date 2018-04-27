@@ -3,13 +3,13 @@ import os
 
 
 def writeTextToFile(folder, filename, data):
-    with open(folder + filename, 'w') as f:
+    with open(folder +"/"+ filename, 'w') as f:
         f.write(data)
         f.close()
 
 
 def removeFile(folder, filename):
-    completeFile = folder+filename
+    completeFile = folder +"/"+filename
     if os.path.isfile(completeFile):
         os.remove(completeFile)
     else:
